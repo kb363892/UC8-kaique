@@ -1,97 +1,31 @@
-const painelLog = document.getElementById('log-painel');
+
+
+const btnGravador = document.getElementById("btn-gravador");
+
+const statusGravacao = document.getElementById("status-gravacao");
 
 
 
-function registrarlLog(mensagem) {
+const textoOriginal = btnGravador.innerHTML;
 
 
 
-    const novaLinha = document.createElement('div');
+btnGravador.addEventListener("mousedown", () => {
 
-    novaLinha.textContent = `[${new Date().toLocaleTimeString()}] ${mensagem}`
+    btnGravador.style.backgroundColor = "#e74c3c";
 
-    ;
+    btnGravador.innerHTML = " 🔴 Gravando... Não solte!";
 
-    painelLog.appendChild(novaLinha);
-
-
-
-};
-
-
-
-//EVENTOS DE MOUSE
-
-const btnClique = document.getElementById('btn-clique');
-
-const areaMouse = document.getElementById('area-mouse');
-
-
-
-btnClique.addEventListener('click', function()  {
-
-    registrarlLog('Ta clicado!');
-
-
+    statusGravacao.textContent = "Status: Capturando áudio... "
 
 });
 
+btnGravador.addEventListener("mouseup", () => {
 
+    btnGravador.style.backgroundColor = "#3498db";
 
-//EVENTOS DE MOUSE: MOUSEENTER
+    btnGravador.innerHTML = " Clique e Segure para grava  ";
 
-areaMouse.addEventListener('mouseenter', function()  {
-
-    areaMouse.style.backgroundColor = '#00FF00';
-
-    areaMouse.textContent = 'Passou o mouse sobre a área!';
-
-    registrarlLog('Passou o mouse sobre a área!');
+    statusGravacao.textContent = "Status: Gravacao concluida com sucesso  "
 
 });
-
-
-
-//EVENTO DE TECLADO: KEYDOWN
-
-const campoTeclado = document.getElementById('campo-teclado');
-
-campoTeclado.addEventListener('keydown', function(evento) {
-
-    registrarlLog("[Tecla Presionada] Teclado Evento 'keydown' ativado.");
-
-});
-
-
-
-//EVENTO DE TECLADO: KEYUP
-
-campoTeclado.addEventListener('keyup', function(evento) {
-
-    registrarlLog("[Tecla Solta] Evento 'keyup' ativado.");
-
-
-
-});
-
-// Evento de formulário: input
-const meuFormulario = document.getElementById('meu-formulario');
-const campoInput = document.getElementById('campo-input');
-
- campoInput.addEventListener('input',function() {
-    registrarlLog(`[INPUT] Formulario:evento 'input' disparado!
-       Valor atual: "${campoInput.value}" `);
- })
-
-
-// Evento de formulário: submit
-
-
-
-    
-
-    
-
-
-
-
