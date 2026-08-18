@@ -1,57 +1,76 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Laboratório de Eventos JavaScript</title>
-  <!-- Vinculação do arquivo CSS externo -->
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missão 116 - JavaScript Interativo</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
 
-  <h1>Laboratório Prático de Eventos JS</h1>
+    <h1> JavaScript Interativo</h1>
 
-  <div class="container">
-    
-    <!-- 1. EVENTOS DE MOUSE -->
-    <div class="card">
-      <h2>1. Eventos de Mouse</h2>
-      <button id="btn-clique">Clique Aqui</button>
-      <div id="area-mouse" class="box-teste">Passe o mouse aqui</div>
-    </div>
+    <!-- FASE 1 -->
+    <section>
+        <h2>Fase 1 - Alterar conteúdo</h2>
 
-    <!-- 2. EVENTOS DE TECLADO -->
-    <div class="card">
-      <h2>2. Eventos de Teclado</h2>
-      <p>Digite no campo abaixo:</p>
-      <input type="text" id="campo-teclado" placeholder="Pressione teclas aqui...">
-    </div>
+        <p id="conteudo">
+            O JavaScript pode alterar o conteúdo de um elemento HTML
+        </p>
 
-    <!-- 3. EVENTOS DE FORMULÁRIO -->
-    <div class="card">
-      <h2>3. Eventos de Formulário</h2>
-      <form id="meu-formulario">
-        <input type="text" id="campo-input" placeholder="Digite algo (input/change)" required>
-        <br><br>
-        <input type="submit" value="Enviar Formulário">
-      </form>
-    </div>
+        <button id="btnAlterar">Alterar texto</button>
+        <button id="btnResetarConteudo">Resetar</button>
+    </section>
 
-    <!-- 4. EVENTOS DE JANELA / PÁGINA -->
-    <div class="card">
-      <h2>4. Eventos de Janela</h2>
-      <p>Redimensione a janela ou faça scroll na página para testar.</p>
-      <p id="info-janela">Tamanho atual: -</p>
-    </div>
+    <!-- FASE 2 -->
+    <section>
+        <h2>Fase 2 - Ligar e desligar a lâmpada</h2>
 
-  </div>
+        <div id="lampada" class="lampada desligada">💡</div>
 
-  <!-- PAINEL DE LOGS PARA VER OS RESULTADOS EM TEMPO REAL -->
-  <div id="log-painel">
-    <div>&gt;_ Aguardando eventos...</div>
-  </div>
+        <button id="btnLigar">Ligar a luz</button>
+        <button id="btnDesligar">Desligar a luz</button>
+    </section>
 
-  <!-- Vinculação do arquivo JavaScript externo (no final do body) -->
-  <script src="js/script.js"></script>
+    <!-- FASE 3 -->
+    <section>
+        <h2>Fase 3 - Alterar estilos</h2>
+
+        <p id="demonstracao">
+            O JavaScript pode alterar o estilo visual de qualquer elemento
+        </p>
+
+        <button id="btnAumentar">Aumentar fonte</button>
+        <button id="btnCor">Mudar cor</button>
+        <button id="btnFundo">Fundo</button>
+        <button id="btnResetarDemonstracao">Resetar</button>
+    </section>
+
+    <!-- FASE 4 -->
+    <section>
+        <h2>Fase 4 - Ocultar o texto</h2>
+
+        <p id="textoOcultar">
+            Este parágrafo vai sumir quando você clicar no botão abaixo.
+        </p>
+
+        <button id="btnOcultar">Ocultar elemento</button>
+        <button id="btnMostrar">Resetar</button>
+    </section>
+
+    <!-- FASE 5 -->
+    <section>
+        <h2>Fase 5 - Exibir o texto</h2>
+
+        <p id="textoEscondido">
+            Este texto estava escondido e agora foi revelado!
+        </p>
+
+        <button id="btnRevelar">Revelar elemento</button>
+        <button id="btnEsconder">Resetar</button>
+    </section>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
