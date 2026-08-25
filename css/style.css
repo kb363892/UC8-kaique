@@ -1,95 +1,440 @@
-:root {
-  --bg-color: #f4f7f6;
-  --card-bg: #ffffff;
-  --primary: #3498db;
-  --text: #2c3e50;
+
+
+
+
+.tenis{
+    width:25% ;
+    height:25%;
+}
+
+.fundo{
+    background-image: url('../img/fundo.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+}
+
+.logo {
+    width: 30%;
+    height: 30%;
+}
+
+.texto{
+    text-align: center;
+}
+
+.texto{
+    color:#232b9e;
+}
+
+.btn{
+    color:#1a1919
+}
+
+.img{
+    text-align:center;
+}
+
+h1{
+    text-align: center;
+    font-weight: 900;
+}
+
+.tenis {
+    display: flex;
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center;
+    gap: 20px;
+}
+ 
+.botao{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.botao button{
+    padding: 15px 40px;
+    border: none;
+    background: black;
+    color: white;
+    border-radius: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    
+
+}
+.preco-container{
+    display: flex;
+    justify-content: center;
+    color:rgb(226, 21, 21)
+}
+.img{
+    text-align: center;
+}
+.p{
+    text-align: center;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+    background-color: black;
+    
+}
+
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+nav a{
+    color:white;
+    font-size: 60px;
+    margin-left: 40px;
+    text-decoration: none;
+    font-family:"Montserrat", sans-serif;
+}
+
+
+
+.box{
+    width: 350px;
+    height: 350px;
+    margin-top: 10px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);      /*define 4 colunas*/
+    gap: 20px;
+    width: 80%;
+    height: 600px;
+    margin: 0 auto;
+}
+
+/*alinhamento ao centro*/
+.card {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.card:hover {
+    transform: scale(1.09); /*aumenta o tamanho da div ao passar o mouse*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /*adiciona uma sombra para destacar a div*/
+    opacity: 0.5; /*aumenta a opacidade para destacar a div*/
+}
+
+.preco{
+    margin-top: 10px;
+    color: #e21515;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+
+form{
+
+    background-color: #f0f0f0;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+     box-shadow: 0 4px 6px rgba(221, 4, 4, 0.534);
+
+     display: flex;
+
+     flex-direction: column;/*organiza os elementos em coluna*/
+
+      gap: 20px;
+
+
+
+
+
+}
+
+input,textarea{
+
+    padding: 15px;
+
+    border: 1px solid rgb(223, 220, 220);
+
+    border-radius: 5px;
+
+}
+
+textarea{
+
+    min-height: 120px;
+
+    resize: vertical;
+
+}
+
+.botoes{
+
+    display: flex;
+
+    gap: 10px;
+
+    padding-top: 20px;
+
+
+
+}
+
+button{
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+}
+
+#btnLimpa{
+
+    background-color: rgb(245, 20, 4);
+
+}
+
+#btnEnviar{
+
+    background-color: rgb(4, 255, 171);
+
+}
+
+p,h2{
+    text-align: center;
+}
+
+
+
+/* ============================= */
+/* RESPONSIVIDADE - UC8          */
+/* ============================= */
+
+/* Garante que nenhum elemento ultrapasse a largura da tela */
+* {
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: var(--bg-color);
-  color: var(--text);
-  margin: 0;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
 }
 
-h1 { 
-  margin-bottom: 30px; 
+img {
+    max-width: 100%;
+    height: auto;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  width: 100%;
-  max-width: 1000px;
+/* ============================= */
+/* TABLETS                       */
+/* ============================= */
+
+@media (max-width: 1024px) {
+
+    header {
+        padding: 20px 40px;
+    }
+
+    nav a {
+        font-size: 35px;
+        margin-left: 20px;
+    }
+
+    .logo {
+        width: 25%;
+        height: auto;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        width: 90%;
+        height: auto;
+        gap: 30px;
+    }
+
+    .box {
+        width: 280px;
+        height: auto;
+    }
+
+    .tenis {
+        width: 40%;
+        height: auto;
+    }
 }
 
-.card {
-  background: var(--card-bg);
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+
+/* ============================= */
+/* CELULARES                     */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+    /* Cabeçalho passa a ficar em coluna */
+    header {
+        flex-direction: column;
+        padding: 15px 20px;
+        gap: 15px;
+    }
+
+    /* Logo menor no celular */
+    .logo {
+        width: 50%;
+        height: auto;
+    }
+
+    /* Menu adaptado para celular */
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    nav a {
+        font-size: 22px;
+        margin-left: 0;
+    }
+
+    /* Títulos menores */
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    /* Produtos ficam em uma coluna */
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 90%;
+        height: auto;
+        gap: 30px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .box {
+        width: 80%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .tenis {
+        width: 80%;
+        height: auto;
+    }
+
+    /* Botão adequado para toque */
+    .botao button {
+        width: 90%;
+        max-width: 350px;
+        padding: 15px 20px;
+        font-size: 18px;
+        min-height: 48px;
+    }
+
+    /* Formulário ocupa quase toda a tela */
+    form {
+        width: 90%;
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .botoes {
+        flex-direction: column;
+    }
+
+    .botoes button {
+        width: 100%;
+        min-height: 48px;
+    }
+
+    .preco {
+        font-size: 20px;
+    }
 }
 
-.card h2 {
-  margin: 0 0 10px 0;
-  font-size: 1.2rem;
-  border-bottom: 2px solid #ecf0f1;
-  padding-bottom: 5px;
+
+/* ============================= */
+/* CELULARES PEQUENOS            */
+/* ============================= */
+
+@media (max-width: 480px) {
+
+    header {
+        padding: 10px;
+    }
+
+    .logo {
+        width: 60%;
+    }
+
+    nav a {
+        font-size: 18px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .grid-container {
+        width: 95%;
+    }
+
+    .box {
+        width: 90%;
+    }
+
+    .botao button {
+        width: 95%;
+    }
 }
 
-button, input[type="submit"] {
-  background-color: var(--primary);
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background 0.2s;
+
+.menu-btn.pressionado {
+    transform: scale(0.95);
+    background-color: #e21515;
+    color: white;
 }
 
-button:hover, input[type="submit"]:hover { 
-  background-color: #2980b9; 
-}
 
-input[type="text"] {
-  padding: 8px;
-  border: 1px solid #bdc3c7;
-  border-radius: 4px;
-  width: 100%;
-  box-sizing: border-box;
-}
 
-.box-teste {
-  height: 80px;
-  background-color: #e74c3c;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 4px;
-  font-weight: bold;
-  transition: background 0.3s;
-}
-
-#log-painel {
-  width: 100%;
-  max-width: 1000px;
-  background: #2c3e50;
-  color: #2ecc71;
-  padding: 15px;
-  border-radius: 8px;
-  margin-top: 25px;
-  box-sizing: border-box;
-  height: 150px;
-  overflow-y: auto;
-  font-family: monospace;
-}
